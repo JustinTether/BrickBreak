@@ -35,8 +35,8 @@
         var paddleX = (canvas.width - paddleWidth) / 2;
         var rightPressed = false;
         var leftPressed = false;
-        var brickRowCount = 3;
-        var brickColumnCount = 5;
+        var brickRowCount = 2;
+        var brickColumnCount = 7;
         var brickWidth = 75;
         var brickHeight = 20;
         var brickPadding = 10;
@@ -226,28 +226,28 @@
         function levelDetection() {
             switch (level) {
                 case 1:
-                    brickColumnCount = 5;
+                    brickColumnCount = 7;
                     brickRowCount = 3;
                     x = canvas.width / 2;
                     y = canvas.height - 60;
                     dy = -1;
                     break;
                 case 2:
-                    brickColumnCount = 5;
+                    brickColumnCount = 7;
                     brickRowCount = 4;
                     x = canvas.width / 2;
                     y = canvas.height - 60;
                     dy = -2.5;
                     break;
                 case 3:
-                    brickColumnCount = 5;
+                    brickColumnCount = 7;
                     brickRowCount = 5;
                     x = canvas.width / 2;
                     y = canvas.height - 60;
                     dy = -3;
                     break;
                 case 4:
-                    brickColumnCount = 5;
+                    brickColumnCount = 7;
                     brickRowCount = 5;
                     x = canvas.width / 2;
                     y = canvas.height - 60;
@@ -255,7 +255,7 @@
                     break;
 
                     case 5: 
-                    brickColumnCount = 6;
+                    brickColumnCount = 7;
                     brickRowCount = 6;
                     x = canvas.width / 2;
                     y = canvas.height - 60;
@@ -264,8 +264,8 @@
                     
 
                 default:
-                    brickColumnCount = 5;
-                    brickRowCount = 3;
+                    brickColumnCount = 7;
+                    brickRowCount = 2;
                     x = canvas.width / 2;
                     y = canvas.height - 60;
 

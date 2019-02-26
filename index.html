@@ -20,7 +20,7 @@
 
 <body>
 
-    <canvas id="myCanvas" width="480" height="320"></canvas>
+    <canvas id="myCanvas" width="640" height="480"></canvas>
 
     <script>
         var canvas = document.getElementById("myCanvas");
@@ -28,7 +28,7 @@
         var x = canvas.width / 2;
         var y = canvas.height - 60;
         var dx = -0.5;
-        var dy = -1;
+        var dy = -2;
         var ballRadius = 10;
         var paddleHeight = 10;
         var paddleWidth = 75;
@@ -83,12 +83,12 @@
 
             if (y + dy > canvas.height) {
 
-                if (x > paddleX && x < paddleX + paddleWidth / 2) {
+                if (x > paddleX && x < paddleX + paddleWidth / 2 +1) {
                     dy = -dy;
                     dx = -0.5;
                 }
 
-                else if (x > paddleX + paddleWidth / 2 && x < paddleX + paddleWidth) {
+                else if (x > paddleX + paddleWidth / 2 +1 && x < paddleX + paddleWidth) {
                     dy = -dy;
                     dx = 0.5;
 
@@ -237,22 +237,31 @@
                     brickRowCount = 4;
                     x = canvas.width / 2;
                     y = canvas.height - 60;
-                    dy = -1.5;
+                    dy = -2.5;
                     break;
                 case 3:
                     brickColumnCount = 5;
                     brickRowCount = 5;
                     x = canvas.width / 2;
                     y = canvas.height - 60;
-                    dy = -2;
+                    dy = -3;
                     break;
                 case 4:
                     brickColumnCount = 5;
                     brickRowCount = 5;
                     x = canvas.width / 2;
                     y = canvas.height - 60;
-                    dy = -3;
+                    dy = -4;
                     break;
+
+                    case 5: 
+                    brickColumnCount = 6;
+                    brickRowCount = 6;
+                    x = canvas.width / 2;
+                    y = canvas.height - 60;
+                    dy = -4;
+                    break;
+                    
 
                 default:
                     brickColumnCount = 5;

@@ -2,7 +2,7 @@ import Paddle from '../src/paddle';
 import inputHandler from '../src/input';
 import Ball from '../src/ball.js';
 import Brick from '../src/brick';
-import {buildLevel, level1, level2} from '../src/levels';
+import {buildLevel, level1, level2, level3} from '../src/levels';
 
 const gameState = {
     PAUSED: 0,
@@ -24,7 +24,7 @@ export default class Game {
       this.gameObjects = [];
       this.bricks = [];
       this.lives = 1;
-      this.levels = [level1, level2];
+      this.levels = [level1, level2, level3];
       this.currentLevel = 0;
 
 
@@ -61,7 +61,7 @@ export default class Game {
       if(this.bricks.length === 0) {
         this.currentLevel++;
         this.gameState = gameState.NEWLEVEL;
-        game.start();
+        this.start();
       }
 
           [...this.gameObjects, ...this.bricks].forEach(object => object.update(deltaTime));

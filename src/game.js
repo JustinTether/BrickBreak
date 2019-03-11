@@ -1,7 +1,7 @@
-import Paddle from '../src/paddle';
-import inputHandler from '../src/input';
+import Paddle from '../src/paddle.js';
+import inputHandler from '../src/input.js';
 import Ball from '../src/ball.js';
-import Brick from '../src/brick';
+import Brick from '../src/brick.js';
 import {buildLevel, level1, level2, level3} from '../src/levels';
 
 const gameState = {
